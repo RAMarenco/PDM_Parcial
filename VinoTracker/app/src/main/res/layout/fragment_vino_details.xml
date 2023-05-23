@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vinoViewModel"
+            type="com.rmarenco.vinotracker.viewmodel.VinoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.vino.vinodetails.VinoDetailsFragment">
+
+        <TextView
+            android:id="@+id/vino_details_textView"
+            style="@style/TextAppearance.AppCompat.Display2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:fontFamily="cursive"
+            android:text="@string/detalle_de_vino_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:layout_marginBottom="@dimen/small_gap"
+            android:backgroundTint="@color/cambridge_blue"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vino_details_textView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/vino_marca_detail_text"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="cursive"
+                    android:text="@string/marca_de_vino_text"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/vino_tipo_detail_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/vino_marca_detail"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:fontFamily="cursive"
+                    android:text="@={vinoViewModel.marca}"
+                    app:layout_constraintBottom_toBottomOf="@+id/vino_marca_detail_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vino_marca_detail_text"
+                    app:layout_constraintTop_toTopOf="@+id/vino_marca_detail_text" />
+
+                <TextView
+                    android:id="@+id/vino_tipo_detail_text"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="cursive"
+                    android:text="@string/tipo_de_vino_text"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vino_marca_detail_text" />
+
+                <TextView
+                    android:id="@+id/vino_tipo_detail"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:fontFamily="cursive"
+                    android:text="@={vinoViewModel.tipo}"
+                    app:layout_constraintBottom_toBottomOf="@+id/vino_tipo_detail_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vino_tipo_detail_text"
+                    app:layout_constraintTop_toTopOf="@+id/vino_tipo_detail_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

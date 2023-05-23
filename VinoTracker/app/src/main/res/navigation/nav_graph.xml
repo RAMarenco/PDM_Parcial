@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/vinoListFragment">
+
+    <fragment
+        android:id="@+id/vinoListFragment"
+        android:name="com.rmarenco.vinotracker.ui.vino.vinolist.VinoListFragment"
+        android:label="VinoListFragment" >
+        <action
+            android:id="@+id/action_vinoListFragment_to_addVinoFragment"
+            app:destination="@id/addVinoFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_vinoListFragment_to_vinoDetailsFragment"
+            app:destination="@id/vinoDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVinoFragment"
+        android:name="com.rmarenco.vinotracker.ui.vino.addvino.AddVinoFragment"
+        android:label="AddVinoFragment" />
+    <fragment
+        android:id="@+id/vinoDetailsFragment"
+        android:name="com.rmarenco.vinotracker.ui.vino.vinodetails.VinoDetailsFragment"
+        android:label="VinoDetailsFragment" />
+</navigation>

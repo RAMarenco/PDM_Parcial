@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">VinoTracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lista_de_vinos_text">Lista de vinos</string>
+    <string name="tipo_de_vino_text">Tipo de vino:</string>
+    <string name="marca_de_vino_text">Marca de vino:</string>
+    <string name="detalle_de_vino_text">Detalle de vino</string>
+    <string name="agregar_vino_text">Agregar vino</string>
+    <string name="marca_hint">Marca</string>
+    <string name="tipo_hint">Tipo</string>
+    <string name="agregar_vino_button_text">Agregar Vino</string>
 </resources>
