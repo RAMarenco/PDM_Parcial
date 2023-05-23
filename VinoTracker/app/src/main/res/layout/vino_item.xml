@@ -6,6 +6,7 @@
     <data></data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/Vino_CardView"
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:layout_marginHorizontal="@dimen/small_gap"
